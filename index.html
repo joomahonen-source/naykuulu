@@ -110,6 +110,34 @@ footer .sis{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .pilotti .kortti{background:var(--lumi);border-radius:14px;padding:22px}
 .pilotti .kortti b{display:block;font-size:19px;margin-bottom:6px}
 @media(max-width:760px){.pilotti .gr{grid-template-columns:1fr}.pilotti ul{columns:1!important}}
+.korosta{font-weight:800;color:var(--puolukka);background:rgba(217,96,110,.14);text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:6px;text-decoration-color:var(--pv);padding:0 4px;border-radius:4px}
+.yla .korosta,.laskuri .korosta,.loppu .korosta{color:var(--pv);background:rgba(217,96,110,.18)}
+.huomio{font-family:Caveat,cursive;font-weight:700;color:var(--puolukka);font-size:24px;line-height:1.1;display:block;margin-top:8px;transform:rotate(-2deg)}
+.tunnistus .kortti{border-top:5px solid var(--puolukka)}
+.tunnistus .kortti b{font-size:21px}
+.mittaus .luku{border-left:6px solid var(--puolukka)}
+.ratkaisu .askel .nro{font-size:40px;line-height:1;letter-spacing:0}
+.turva .rivi b{font-size:19px}
+.pilotti ul li{list-style:none;position:relative;padding-left:4px}
+.pilotti ul li:before{content:"✓";position:absolute;left:-22px;color:var(--puolukka);font-weight:800}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+.vs div{border-radius:14px;padding:20px 22px}
+.vs .ei{background:#E4E1D8;color:var(--himmea);text-decoration:none}.vs .ei b{color:var(--syva)}
+.vs .on{background:var(--puolukka);color:#fff}
+.vs b{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;opacity:.85}
+@media(max-width:760px){.vs{grid-template-columns:1fr}}
+.pilottimerkki{display:inline-block;background:var(--puolukka);color:#fff;font-weight:600;font-size:16px;padding:8px 16px;border-radius:999px;margin:4px 0 18px}
+.pilottimerkki b{font-weight:800;font-size:18px}
+.laskuri{padding:72px 0;background:var(--syva);color:var(--lumi)}
+.laskuri p{color:var(--koivu)}
+.lgr{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:26px 0}
+.lgr label{display:flex;flex-direction:column;gap:8px;font-weight:600;font-size:15px}
+.lgr input{font:inherit;font-size:24px;font-weight:700;padding:12px 14px;border-radius:12px;border:2px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;width:100%}
+.ltul{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:14px}
+.ltul div{background:rgba(255,255,255,.06);border-left:6px solid var(--pv);border-radius:12px;padding:20px 22px}
+.ltul .iso{display:block;font-size:clamp(34px,5vw,52px);font-weight:800;color:var(--pv);line-height:1.1}
+.ltul span{color:var(--koivu)}
+@media(max-width:760px){.lgr,.ltul{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -121,8 +149,9 @@ footer .sis{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="gr">
       <div>
         <p class="kasi">Näy &amp; Kuulu etsii</p>
+        <div class="pilottimerkki">Pilotti <b>-50 %</b> · 3 paikkaa</div>
         <h1>Kolme pilottiasiakasta, joilla on <em>mahtava tuote</em>.</h1>
-        <p class="ingressi">Firma on tehny hyvää duunia vuosia, mut markkinointi tuntuu vähän vanhanaikaselta tän tekoälyjutun keskellä. Ja puhelin ei soi niinku ennen. Tunnistatko?</p>
+        <p class="ingressi">Firma on tehny hyvää duunia vuosia, mut markkinointi tuntuu vähän vanhanaikaselta tän tekoälyjutun keskellä. Ja <b style="color:#fff">puhelin ei soi niinku ennen.</b> Tunnistatko?</p>
         <a class="nappi" href="#mittaus">Haluan mukaan pilottiin</a>
         <p class="huom pieni">Tai tiiätkö jonkun, joka tarvis tätä? Laita tää sivu sille.</p>
       </div>
@@ -134,9 +163,9 @@ footer .sis{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="sis">
     <h2>Kuulostaako tutulta?</h2>
     <div class="lista">
-      <div class="kortti"><b>Vanhat asiakkaat palaavat, uusia tulee vähemmän.</b>Maine on hyvä niiden keskuudessa, jotka jo tuntevat sinut.</div>
-      <div class="kortti"><b>Profiileja on, mutta kukaan ei hoida niitä.</b>Aukioloajat, kuvat ja yhteystiedot ovat eri paikoissa eri tiedoilla.</div>
-      <div class="kortti"><b>Markkinointi tuntuu riskiltä.</b>Olet kuullut lupauksia ennenkin, etkä tiedä, mistä maksat ja mitä saat.</div>
+      <div class="kortti"><b>Vanhat asiakkaat palaavat, <span class="korosta">uusia tulee vähemmän.</span></b>Maine on hyvä niiden keskuudessa, jotka jo tuntevat sinut.</div>
+      <div class="kortti"><b>Profiileja on, mutta <span class="korosta">kukaan ei hoida niitä.</span></b>Aukioloajat, kuvat ja yhteystiedot ovat eri paikoissa eri tiedoilla.</div>
+      <div class="kortti"><b>Markkinointi <span class="korosta">tuntuu riskiltä.</span></b>Olet kuullut lupauksia ennenkin, etkä tiedä, mistä maksat ja mitä saat.</div>
     </div>
   </div>
 </section>
@@ -149,31 +178,55 @@ footer .sis{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <h2>Mittasimme kymmenen jyväskyläläistä remonttiyritystä.</h2>
     <p>Teimme jokaiselle 16 hakua, joita asiakas oikeasti tekee: Googlessa, Googlen tekoälytilassa, ChatGPT:ssä ja Perplexityssä. Yritykset ovat vakiintuneita, ja niiden liikevaihto on 0,5–10 miljoonaa euroa.</p>
     <div class="luvut">
-      <div class="luku"><div class="iso">3/16</div><p>Paraskin yritys löytyi vain kolmesta haussa kuudestatoista.</p></div>
-      <div class="luku"><div class="iso">1/10</div><p>Tekoäly mainitsi kymmenestä yrityksestä vain yhden, ja senkin kerran.</p></div>
-      <div class="luku"><div class="iso">4,8 ★</div><p>Yritys, jonka arvosana on 4,8 tähteä 22 arvostelusta, ei löytynyt yhdestäkään hausta.</p></div>
+      <div class="luku"><div class="iso">3/16</div><p>Paraskin yritys löytyi <b>vain kolmesta haussa kuudestatoista.</b><span class="huomio">ja tää oli se paras!</span></p></div>
+      <div class="luku"><div class="iso">1/10</div><p>Tekoäly mainitsi kymmenestä yrityksestä <b>vain yhden</b>, ja senkin kerran.<span class="huomio">9 firmaa näkymättömiä</span></p></div>
+      <div class="luku"><div class="iso">4,8 ★</div><p>Yritys, jonka arvosana on 4,8 tähteä 22 arvostelusta, <b>ei löytynyt yhdestäkään hausta.</b><span class="huomio">hyvä maine ei yksin riitä</span></p></div>
     </div>
     <p class="pieni">Mittaus 21.10.2026 klo 17.15–17.35, tyhjä ja kirjautumaton selain. Tulokset vaihtelevat päivän ja sijainnin mukaan. Jokaisesta hausta on tallessa kuvakaappaus.</p>
   </div>
 </section>
 
+<section class="laskuri" id="laskuri">
+  <div class="sis">
+    <p class="kasi">Laske itse</p>
+    <h2>Paljonko sulla on <span class="korosta">varaa menettää?</span></h2>
+    <p style="max-width:720px">Laita omat lukusi. Laskuri ei arvaa mitään, se kertoo vain, mitä sun omat luvut tarkoittaa vuodessa.</p>
+    <div class="lgr">
+      <label>Keskimääräinen kauppa (€)<input type="number" id="l_kauppa" value="800" min="0" step="50"></label>
+      <label>Asiakkaita, jotka menee kuussa muualle<input type="number" id="l_menee" value="2" min="0" step="1"></label>
+      <label>Vapaata kapasiteettia kuussa (keikkaa)<input type="number" id="l_kapa" value="4" min="0" step="1"></label>
+    </div>
+    <div class="ltul">
+      <div><span class="iso" id="l_menetys">19 200 €</span><span>myyntiä menee vuodessa muualle</span></div>
+      <div><span class="iso" id="l_kapaeur">38 400 €</span><span>tekemätöntä myyntiä vuodessa, vaikka aikaa olisi</span></div>
+    </div>
+    <p class="pieni">Esimerkkiluvut ovat valmiina vain mallina. Vaihda ne omiksi.</p>
+  </div>
+</section>
+<script>
+(function(){function f(n){return Math.round(n).toLocaleString('fi-FI')+' €'}
+function laske(){var k=+document.getElementById('l_kauppa').value||0,m=+document.getElementById('l_menee').value||0,c=+document.getElementById('l_kapa').value||0;
+document.getElementById('l_menetys').textContent=f(k*m*12);document.getElementById('l_kapaeur').textContent=f(k*c*12)}
+['l_kauppa','l_menee','l_kapa'].forEach(function(i){document.getElementById(i).addEventListener('input',laske)});laske()})();
+</script>
 <section class="pilotti">
   <div class="sis">
     <p class="kasi">Pilotti</p>
-    <h2>Mitä pilotti tarkoittaa?</h2>
+    <h2>Mitä pilotti <span class="korosta">tarkoittaa?</span></h2>
     <p style="max-width:720px">Mä teen tän itse ja käsityönä, ilman isojen toimistojen pitkiä ja kalliita prosesseja. Siks paikkoja on kolme.</p>
     <div class="gr">
       <div class="kortti" style="grid-column:1/-1"><b>Sä saat</b><ul style="margin:6px 0 0 20px;columns:2;column-gap:40px"><li>Google-, Bing- ja Apple-yritysprofiilit kuntoon</li><li>Firman tiedot täsmäytettynä samoiksi kaikkialla</li><li>Näkyvyys hakukoneissa ja tekoälyhauissa (SEO ja GEO)</li><li>Profiilit ja tilit sun omiin nimiin</li><li>Markkinointisuunnitelman</li><li>Ennakkomittauksen ja uusintamittauksen kahden kuukauden päästä</li></ul></div>
       <div class="kortti"><b>Mä pyydän</b>Rehellistä palautetta matkan varrella ja luvan kertoa sun firman nimi ja ennen ja jälkeen -luvut referenssinä.</div>
       <div class="kortti"><b>Kesto ja hinta</b>Paketin normaalihinta on vähintään 1 000 €. Pilottiasiakas saa sen puoleen hintaan (-50 %). Työ kestää noin kuukauden, ja tulokset mitataan uudestaan kahden kuukauden päästä.</div>
     </div>
-  </div>
+  <div class="vs"><div class="ei"><b>Iso toimisto</b>Pitkä prosessi, kuukausimaksu ennen tuloksia, raportti jota kukaan ei avaa ja vaihtuva yhteyshenkilö.</div><div class="on"><b>Näy &amp; Kuulu</b><b style="text-decoration:underline;text-underline-offset:4px">Yksi ihminen alusta loppuun.</b> Lähtötilanne mitataan ensin, ja näet itse luvuista, mitä muuttui.</div></div>
+</div>
 </section>
 <!-- 4. RATKAISU -->
 <section class="ratkaisu" id="miten">
   <div class="sis">
     <p class="kasi">Ensin mitataan, sitten tehdään</p>
-    <h2>Mä hoidan näkyvyyden. Sä teet sitä, missä oot paras.</h2>
+    <h2>Mä hoidan näkyvyyden. Sä teet sitä, <span class="korosta">missä oot paras.</span></h2>
     <div class="askeleet">
       <div class="askel"><div class="nro">01</div><h3>Ennakkomittaus</h3><p>Maksuton. Katsomme, miten yrityksesi löytyy nyt, ja kerromme yhden konkreettisen havainnon.</p></div>
       <div class="askel"><div class="nro">02</div><h3>Löydy kuntoon</h3><p>Google-yritysprofiili, hakemistot, arvostelut ja näkyvyys tekoälyhauissa kerralla kuntoon.</p></div>
@@ -192,7 +245,7 @@ footer .sis{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <!-- 5. RISKIN POISTO: ARVOT JA SITOUMUKSET -->
 <section class="turva">
   <div class="sis">
-    <h2>Ilman, että sinua huijataan.</h2>
+    <h2>Ilman, että <span class="korosta">sinua huijataan.</span></h2>
     <div class="gr">
       <div class="rivi"><span>1</span><div><b>Lähtötilanne näytetään ennen työtä.</b> Tiedät, mistä lähdetään, ennen kuin maksat mitään.</div></div>
       <div class="rivi"><span>2</span><div><b>Tilit ovat aina sinun nimissäsi.</b> Emme pyydä salasanojasi. Hoidamme asiat käyttöoikeudella.</div></div>
