@@ -139,6 +139,13 @@ footer .sis{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .ltul span{color:var(--koivu)}
 @media(max-width:760px){.lgr,.ltul{grid-template-columns:1fr}}
 .pilotti ul li{break-inside:avoid}
+.eva{position:fixed;left:16px;right:16px;bottom:16px;max-width:560px;margin:0 auto;background:var(--valk);color:var(--syva);border:1px solid var(--koivu);border-radius:16px;box-shadow:0 10px 30px rgba(20,39,64,.18);padding:18px 20px;font-size:15px;z-index:50;display:none}
+.eva b{display:block;margin-bottom:4px}
+.eva .napit{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.eva button{font:inherit;font-weight:700;border-radius:999px;padding:10px 18px;cursor:pointer;border:2px solid var(--puolukka)}
+.eva .hy{background:var(--puolukka);color:var(--valk)}
+.eva .ei{background:transparent;color:var(--puolukka)}
+footer button.evalinkki{background:none;border:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer;padding:0}
 </style>
 </head>
 <body>
@@ -266,6 +273,29 @@ document.getElementById('l_menetys').textContent=f(k*m*12);document.getElementBy
     <p class="yht">joonas@naykuulu.fi · <a href="tel:+358401561190" style="color:inherit">040 156 1190</a></p>
   </div>
 </section>
-<footer><div class="sis"><div>Näy &amp; Kuulu · Jyväskylä</div><div>Sinut löydetään, nähdään ja kuullaan.</div></div></footer>
+<footer><div class="sis"><div>Näy &amp; Kuulu · Jyväskylä</div><div>Sinut löydetään, nähdään ja kuullaan.</div><div><button class="evalinkki" id="eva_auki">Evästeasetukset</button></div></div></footer>
+<div class="eva" id="eva" role="dialog" aria-label="Evästeet">
+  <b>Evästeet</b>
+  Sivu käyttää välttämättömien lisäksi analytiikkaevästeitä (Google Analytics ja Microsoft Clarity), joilla näen, montako kävijää sivulla käy, mistä he tulevat ja miten sivua käytetään. Analytiikka käynnistyy vain, jos hyväksyt sen. Voit muuttaa valintaa milloin vain sivun alalaidasta.
+  <div class="napit"><button class="hy" id="eva_hy">Hyväksy analytiikka</button><button class="ei" id="eva_ei">Vain välttämättömät</button></div>
+</div>
+<script>
+(function(){var ID='G-E0XFE2C05K',CL='z3s92cz19c',K='nk_suostumus';
+function lue(){try{return localStorage.getItem(K)}catch(e){return null}}
+function tallenna(v){try{localStorage.setItem(K,v)}catch(e){}}
+var ladattu=false;
+function lataa(){if(ladattu)return;ladattu=true;window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});
+gtag('js',new Date());gtag('config',ID);var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+ID;document.head.appendChild(s);
+(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,'clarity','script',CL);window.clarity('consent')}
+var eva=document.getElementById('eva');
+function nayta(){eva.style.display='block'}
+document.getElementById('eva_hy').onclick=function(){tallenna('kylla');eva.style.display='none';lataa()};
+document.getElementById('eva_ei').onclick=function(){tallenna('ei');eva.style.display='none';if(ladattu)location.reload()};
+document.getElementById('eva_auki').onclick=nayta;
+var v=lue();if(v==='kylla')lataa();else if(v!=='ei')nayta();
+document.querySelectorAll('a[href*="docs.google.com/forms"]').forEach(function(a){a.addEventListener('click',function(){if(window.gtag)gtag('event','generate_lead',{lomake:'pilotti'})})});
+})();
+</script>
 </body>
 </html>
