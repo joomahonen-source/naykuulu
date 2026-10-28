@@ -40,6 +40,11 @@ section{padding:72px 0}
 .yla nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:56px}
 .yla nav img{height:40px}
 .yla nav a.pieni{color:var(--koivu);text-decoration:none}
+.yla nav .navoik{display:flex;align-items:center;gap:18px}
+.yla nav a.ilmo{background:var(--puolukka);color:#fff;font-weight:700;font-size:16px;text-decoration:none;padding:10px 18px;border-radius:999px;white-space:nowrap}
+.yla nav a.ilmo:hover{background:#9c2f3c}
+@media(max-width:420px){.yla nav .navoik{gap:12px}.yla nav a.puh,.yla nav a.ilmo{font-size:15px}.yla nav a.ilmo{padding:9px 14px}.yla nav img{height:34px}}
+.yla nav a.puh{color:var(--lumi);font-weight:700;text-decoration:none;font-size:16px;white-space:nowrap}
 .yla .gr{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
 .yla h1{font-size:clamp(34px,5.4vw,58px);margin-bottom:22px}
 .yla h1 em{font-style:normal;color:var(--pv)}
@@ -153,7 +158,7 @@ footer button.evalinkki{background:none;border:0;color:inherit;font:inherit;text
 <!-- 1. ONGELMA, JONKA LUKIJA TUNNISTAA -->
 <header class="yla">
   <div class="sis">
-    <nav><img src="merkki_lumi.png" alt="Näy &amp; Kuulu"><a class="pieni" href="#mittaus">Ilmoittaudu</a></nav>
+    <nav><img src="merkki_lumi.png" alt="Näy &amp; Kuulu"><span class="navoik"><a class="puh" href="tel:+358401561190">040 156 1190</a><a class="ilmo" href="#mittaus">Ilmoittaudu</a></span></nav>
     <div class="gr">
       <div>
         <p class="kasi">Näy &amp; Kuulu etsii</p>
