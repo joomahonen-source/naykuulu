@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tunnu: verkkosivu, joka toimii puhelimella | Näy &amp; Kuulu</title>
+<meta name="description" content="Verkkosivun korjaus tai uusi kattava sivusto, joka toimii puhelimella: palvelusivut, hakukuvaukset, soittolinkki, yritystiedot ja nopeus kuntoon.">
+<link rel="canonical" href="https://naykuulu.fi/palvelut/tunnu/">
+<meta property="og:title" content="Tunnu: verkkosivu, joka toimii puhelimella | Näy &amp; Kuulu">
+<meta property="og:description" content="Verkkosivun korjaus tai uusi kattava sivusto, joka toimii puhelimella: palvelusivut, hakukuvaukset, soittolinkki, yritystiedot ja nopeus kuntoon.">
+<meta property="og:image" content="https://naykuulu.fi/jako.png">
+<meta property="og:url" content="https://naykuulu.fi/palvelut/tunnu/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#2F5D50">
+<link rel="icon" href="/merkki_sini.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;600;700&family=Caveat:wght@700&display=swap">
+<style>
+:root{--sini:#1F3A5F;--syva:#142740;--lumi:#F7F7F2;--koivu:#D9D6CC;--puolukka:#B23A48;--pv:#D9606E;--himmea:#56677F;--valk:#FFFFFF;
+--lakka:#E0A43A;--kuusi:#2F5D50;--marja:#6E2238;--paperi:#FBFAF6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--paperi);color:var(--syva);line-height:1.62;font-size:17.5px}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--lakka);outline-offset:3px;border-radius:6px}
+.sis{max-width:1120px;margin:0 auto;padding:0 20px}
+.kapea{max-width:700px}
+h1,h2,h3{font-family:'Bricolage Grotesque',Inter,sans-serif;line-height:1.04;letter-spacing:-.025em;font-weight:800}
+h2{font-size:clamp(30px,4.2vw,46px);margin-bottom:20px}
+h3{font-size:24px;line-height:1.15;margin-bottom:8px}
+p+p{margin-top:14px}
+.kasi{font-family:Caveat,cursive;font-weight:700;font-size:27px;line-height:1.1}
+.nappi{display:inline-block;background:var(--puolukka);color:#fff;text-decoration:none;font-weight:700;padding:16px 28px;border-radius:999px;font-size:17px;box-shadow:0 3px 0 #7d2531}
+.nappi:hover{background:#9c2f3c}
+.nappi:active{transform:translateY(2px);box-shadow:0 1px 0 #7d2531}
+.pieni{font-size:14.5px;color:var(--himmea)}
+.piirros{display:block;width:100%;height:auto;fill:none;stroke:currentColor;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.piirros .taysi{fill:currentColor}
+
+/* yläosa: aistin väri, iso piirros */
+.yla2{background:var(--tausta);color:var(--teksti);position:relative;overflow:hidden}
+.yla2 nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:24px 0}
+.yla2 nav .logo img{height:34px;display:block}
+.yla2 nav .linkit{display:flex;gap:6px 20px;flex-wrap:wrap;align-items:center}
+.yla2 nav .linkit a{text-decoration:none;font-weight:600;font-size:16px;opacity:.82}
+.yla2 nav .linkit a:hover,.yla2 nav .linkit a[aria-current]{opacity:1;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:2px}
+.yla2 nav .linkit a.ilmo{opacity:1;background:var(--puolukka);color:#fff;padding:9px 16px;border-radius:999px;text-decoration:none}
+.yla2.punainen nav .linkit a.ilmo{background:var(--lumi);color:var(--syva)}
+.yla2 .gr{display:grid;grid-template-columns:1.35fr .65fr;gap:32px;align-items:end;padding:36px 0 0}
+.yla2 h1{font-size:clamp(40px,6.6vw,84px);margin-bottom:22px}
+.yla2 .ingressi{font-size:20px;max-width:600px;opacity:.9;padding-bottom:64px}
+.yla2 .kuvaa{color:var(--viiva);max-width:330px;justify-self:end;width:100%;margin-bottom:-6px}
+.yla2 img.kasvo{height:auto;max-width:300px;margin-bottom:0}
+.polku{font-size:14px;opacity:.8;margin-bottom:16px}.polku a{text-underline-offset:3px}
+.kaari{display:block;width:100%;height:46px;color:var(--paperi);margin-top:-1px}
+@media(max-width:760px){.yla2 .gr{grid-template-columns:1fr}.yla2 .kuvaa{max-width:170px;justify-self:start;order:-1;margin:0}.yla2 .ingressi{padding-bottom:40px}.yla2 nav .linkit a{font-size:15px}}
+
+/* piirto kerran sivun latautuessa */
+@media (prefers-reduced-motion:no-preference){
+.yla2 .kuvaa path,.yla2 .kuvaa circle{stroke-dasharray:900;stroke-dashoffset:900;animation:piirra 1.6s cubic-bezier(.6,.1,.2,1) .15s forwards}
+.yla2 .kuvaa .aalto{animation-delay:.9s}
+@keyframes piirra{to{stroke-dashoffset:0}}}
+
+section{padding:64px 0}
+.vali{padding-top:0}
+
+/* ongelma + mittausruudukko */
+.ongelma{display:grid;grid-template-columns:1fr 260px;gap:48px;align-items:start}
+.ongelma .teksti{font-size:19px}
+.ruudukko{background:var(--valk);border:2px solid var(--syva);border-radius:20px;padding:22px;box-shadow:6px 6px 0 var(--syva)}
+.ruudukko .pisteet{display:grid;grid-template-columns:repeat(4,34px);gap:9px;margin:14px 0}
+.ruudukko .pisteet i{aspect-ratio:1;border-radius:50%;border:2.5px solid var(--koivu)}
+.ruudukko .pisteet i.on{background:var(--puolukka);border-color:var(--puolukka)}
+.ruudukko b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:48px;line-height:1;margin:2px 0}
+.ruudukko .pieni{display:block}
+.ruudukko .kasi{color:var(--puolukka);font-size:24px;display:block;transform:rotate(-2deg)}
+@media(max-width:760px){.ongelma{grid-template-columns:1fr}}
+
+/* mitä teen: käsin rastitettu lista */
+.tehdaan{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px 36px;margin-top:8px}
+.tehdaan li{position:relative;padding:10px 0 10px 48px;border-bottom:2px dashed var(--koivu);font-size:18px}
+.tehdaan li svg{position:absolute;left:0;top:8px;width:32px;height:32px;fill:none;stroke:var(--vari);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+
+.logot{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.logot img{width:22px;height:22px;object-fit:contain;border-radius:4px;background:#fff;padding:2px;box-sizing:content-box;box-shadow:0 0 0 1px var(--koivu)}
+.logorivi{display:flex;flex-wrap:wrap;gap:10px 18px;margin:0 0 26px}
+.logorivi span{display:flex;align-items:center;gap:8px;font-weight:600;font-size:15px}
+.logorivi img{width:26px;height:26px;object-fit:contain}
+.tavaramerkki{font-size:13px;color:var(--himmea);margin-top:14px}
+.tiedot{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.tieto{background:var(--valk);border:2px solid var(--syva);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.tieto b{font-family:'Bricolage Grotesque',sans-serif;font-size:52px;line-height:1;color:var(--puolukka)}
+.tieto p{flex:1}
+.tieto a{font-size:13.5px;color:var(--himmea);text-underline-offset:3px}
+.graafi .palkit{margin:16px 0 6px}
+.graafi .akseli{position:relative;display:grid;gap:8px;padding:6px 0}
+.graafi .palkki{height:22px;border-radius:0 4px 4px 0;background:var(--puolukka)}
+.graafi .palkki.hyva{background:#3E8E5E}
+.graafi .raja{position:absolute;top:0;bottom:0;width:0;border-left:2px dashed var(--himmea)}
+.graafi .asteikko{position:relative;height:16px;font-size:12px;color:var(--himmea)}
+.graafi .asteikko em{position:absolute;transform:translateX(-50%);font-style:normal;white-space:nowrap}
+.graafi .asteikko em:last-child{transform:translateX(-100%)}
+.graafi .selite{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;color:var(--himmea);margin-top:6px}
+.graafi .selite i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle}
+.graafi .selite i.m{background:var(--puolukka)}.graafi .selite i.h{background:#3E8E5E}
+.serp{list-style:none;display:grid;gap:6px;margin:12px 0;font-size:14px}
+.serp li{border:2px solid var(--koivu);border-radius:8px;padding:7px 10px}
+.serp li em{display:block;font-style:normal;font-size:11.5px;font-weight:700;color:var(--himmea)}
+.serp li.mainos{background:#F3F1EA}
+.serp li.kartta{background:#E9EEF4;border-color:#C8D3E0}
+.serp li.sina{border:2px dashed var(--puolukka);color:var(--puolukka);font-weight:700;opacity:.75}
+.vuosi{display:grid;grid-template-columns:18px 1fr;gap:6px 8px;align-items:center;margin:14px 0 8px}
+.vuosi>span{font-weight:800;font-size:14px}
+.vuosi>div{display:grid;grid-template-columns:repeat(12,1fr);gap:3px}
+.vuosi i{aspect-ratio:1;border-radius:50%;border:2px solid var(--koivu)}
+.vuosi i.on{background:var(--puolukka);border-color:var(--puolukka)}
+.vuosi .kk em{font-style:normal;font-size:10px;color:var(--himmea);text-align:center}
+.polku2{list-style:none;display:grid;gap:0;margin:12px 0}
+.polku2 li{position:relative;padding:8px 0 12px 26px;border-left:3px solid var(--koivu);margin-left:8px}
+.polku2 li:before{content:"";position:absolute;left:-9px;top:10px;width:14px;height:14px;border-radius:50%;background:var(--paperi);border:3px solid var(--puolukka)}
+.polku2 li:first-child:before{border-color:var(--koivu)}
+.polku2 li:last-child{border-left-color:transparent}
+.graafi .polku2 b{display:block;font-family:Inter,sans-serif;font-size:16px;font-weight:700;margin:0;line-height:1.3}.polku2 span{font-size:13.5px;color:var(--himmea)}
+/* tulos */
+.tulos{background:var(--vaalea);border-radius:28px;padding:36px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.tulos .ee{display:flex;align-items:center;gap:14px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:40px;line-height:1}
+.tulos .ee small{display:block;font-family:Inter,sans-serif;font-size:13px;font-weight:600;color:var(--himmea);letter-spacing:0}
+.tulos .ee svg{width:56px;height:30px;fill:none;stroke:var(--vari);stroke-width:4;stroke-linecap:round}
+@media(max-width:760px){.tulos{grid-template-columns:1fr;padding:26px}}
+
+/* hintalaput */
+.laput{display:flex;flex-wrap:wrap;gap:26px 22px;margin:26px 0 18px;padding-left:6px}
+.lappu{position:relative;background:var(--valk);border:2px solid var(--syva);border-radius:10px 18px 18px 10px;padding:18px 22px 18px 38px;min-width:220px;max-width:300px;flex:1 1 220px;transform:rotate(var(--k,-1.2deg))}
+.lappu:nth-child(2n){--k:1deg}.lappu:nth-child(3n){--k:-.4deg}
+.lappu:before{content:"";position:absolute;left:13px;top:50%;width:12px;height:12px;margin-top:-6px;border-radius:50%;border:2px solid var(--syva);background:var(--paperi)}
+.lappu b{display:block;font-size:15px}
+.lappu .h{display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:31px;line-height:1.1;color:var(--vari);margin:4px 0}
+.lappu span{font-size:14.5px;color:var(--himmea);display:block;line-height:1.4}
+
+/* muut aistit */
+.aistit{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+.aistit a{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;padding:8px 16px 8px 8px;border-radius:999px;background:var(--valk);border:2px solid var(--koivu)}
+.aistit a svg{width:34px;height:34px;padding:4px;border-radius:50%;background:var(--av);color:var(--ai)}
+.aistit a:hover{border-color:var(--syva)}
+
+/* kehotus */
+.cta2{background:var(--syva);color:var(--lumi);border-radius:30px;padding:44px;display:grid;grid-template-columns:1fr 200px;gap:28px;align-items:center;position:relative;overflow:hidden}
+.cta2 h2{color:var(--lumi)}.cta2 p{color:var(--koivu);margin-bottom:24px;max-width:560px}
+.cta2 .kuvaa{color:var(--lakka)}
+@media(max-width:760px){.cta2{grid-template-columns:1fr;padding:30px 24px}.cta2 .kuvaa{max-width:120px;order:-1}}
+
+/* palvelujen mosaiikki */
+.mosaiikki{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.laatta{grid-column:span 2;background:var(--av);color:var(--ai);border-radius:26px;padding:28px;text-decoration:none;display:flex;flex-direction:column;gap:10px;min-height:300px;position:relative;overflow:hidden}
+.laatta.iso{grid-column:span 4;min-height:380px}
+.laatta h3{font-size:clamp(34px,4vw,52px)}
+.laatta p{max-width:420px;opacity:.92}
+.laatta .piirros{position:absolute;right:-18px;bottom:-22px;width:46%;max-width:220px;opacity:.95}
+.laatta.iso .piirros{max-width:290px}
+.laatta .mene{max-width:62%;margin-top:auto;font-weight:700;text-decoration:underline;text-underline-offset:5px;position:relative}
+.laatta .kasi{position:relative}
+.laatta:hover{filter:brightness(1.06)}
+@media(max-width:860px){.mosaiikki{grid-template-columns:1fr}.laatta,.laatta.iso{grid-column:auto;min-height:250px}}
+
+/* mittauskortti */
+.kortti2{background:var(--valk);border:2px solid var(--syva);border-radius:22px;box-shadow:8px 8px 0 var(--syva);padding:26px;max-width:520px}
+.kortti2 header{display:flex;justify-content:space-between;align-items:baseline;gap:10px;border-bottom:2px dashed var(--koivu);padding-bottom:12px;margin-bottom:6px}
+.kortti2 header b{font-family:'Bricolage Grotesque',sans-serif;font-size:22px}
+.rivi2{display:grid;grid-template-columns:22px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid #ECEAE3;align-items:start}
+.rivi2:last-child{border-bottom:0}
+.rivi2 i{width:18px;height:18px;border-radius:50%;margin-top:4px}
+.rivi2 i.v{background:#3E8E5E}.rivi2 i.k{background:var(--lakka)}.rivi2 i.p{background:var(--puolukka)}
+.rivi2 span{display:block;font-size:14.5px;color:var(--himmea)}
+.mittauskaksi{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+@media(max-width:860px){.mittauskaksi{grid-template-columns:1fr}}
+.kohdat{list-style:none;columns:2;column-gap:36px}
+.kohdat li{break-inside:avoid;padding:12px 0;border-bottom:2px dashed var(--koivu)}
+.kohdat li b{display:block}
+@media(max-width:700px){.kohdat{columns:1}}
+.askeleet{list-style:none;counter-reset:a;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:10px}
+.askeleet li{counter-increment:a;background:var(--valk);border-radius:20px;padding:24px;border:2px solid var(--koivu)}
+.askeleet li:before{content:counter(a);display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:46px;line-height:1;color:var(--puolukka);margin-bottom:8px}
+@media(max-width:760px){.askeleet{grid-template-columns:1fr}}
+
+/* blogi */
+.artikkeli{font-size:18.5px}
+.artikkeli h2{font-size:clamp(28px,3.4vw,38px);margin:48px 0 14px}
+.artikkeli p,.artikkeli ul,.artikkeli ol{margin-bottom:16px}
+.artikkeli ul,.artikkeli ol{padding-left:26px}
+.artikkeli li{margin-bottom:8px}
+.artikkeli .meta{font-size:15px;color:var(--himmea);margin-bottom:8px}
+.artikkeli a{text-decoration-color:var(--puolukka);text-decoration-thickness:2px;text-underline-offset:3px}
+.nosto{font-family:Caveat,cursive;font-weight:700;font-size:34px;line-height:1.15;color:var(--puolukka);margin:34px 0;padding-left:22px;border-left:5px solid var(--puolukka);transform:rotate(-.6deg)}
+table.taulu{border-collapse:collapse;width:100%;margin:18px 0 24px;background:var(--valk);border:2px solid var(--syva);border-radius:14px;overflow:hidden;font-size:16.5px}
+table.taulu th,table.taulu td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--koivu);vertical-align:top}
+table.taulu th{background:var(--koivu);font-weight:700}
+.bloglista{display:grid;gap:18px}
+.bloglista a{display:grid;grid-template-columns:120px 1fr;gap:22px;align-items:center;background:var(--valk);border:2px solid var(--syva);border-radius:22px;padding:22px;text-decoration:none;box-shadow:5px 5px 0 var(--syva)}
+.bloglista a .piirros{color:var(--puolukka)}
+.bloglista a b{font-family:'Bricolage Grotesque',sans-serif;font-size:26px;line-height:1.1;display:block;margin-bottom:6px}
+.bloglista a span{color:var(--himmea)}
+@media(max-width:600px){.bloglista a{grid-template-columns:1fr}.bloglista a .piirros{width:80px}}
+
+footer.ala2{background:var(--syva);color:var(--koivu);padding:44px 0;font-size:15px;margin-top:64px}
+footer.ala2 .sis{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:start}
+footer.ala2 img{height:30px}
+footer.ala2 nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+footer.ala2 a{color:var(--lumi);text-underline-offset:3px}
+footer.ala2 address{font-style:normal;line-height:1.7}
+footer button.evalinkki{background:none;border:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer;padding:0}
+@media(max-width:760px){footer.ala2 .sis{grid-template-columns:1fr}}
+.eva{position:fixed;left:16px;right:16px;bottom:16px;max-width:560px;margin:0 auto;background:var(--valk);color:var(--syva);border:2px solid var(--syva);border-radius:16px;box-shadow:6px 6px 0 var(--syva);padding:18px 20px;font-size:15px;z-index:50;display:none}
+.eva b{display:block;margin-bottom:4px}
+.eva .napit{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.eva button{font:inherit;font-weight:700;border-radius:999px;padding:10px 18px;cursor:pointer;border:2px solid var(--puolukka)}
+.eva .hy{background:var(--puolukka);color:var(--valk)}
+.eva .ei{background:transparent;color:var(--puolukka)}
+@media print{.eva{display:none!important}.yla2 .kuvaa path,.yla2 .kuvaa circle{stroke-dashoffset:0!important;animation:none!important}}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://naykuulu.fi/#yritys",
+   "name": "Näy & Kuulu",
+   "url": "https://naykuulu.fi/",
+   "logo": "https://naykuulu.fi/merkki_sini.png",
+   "image": "https://naykuulu.fi/jako.png",
+   "description": "Näy & Kuulu laittaa yrityksen näkyvyyden kuntoon Googlessa, kartalla ja tekoälyhauissa ja näyttää tuloksen luvuin. Lähtötilanne mitataan maksutta ennen työtä.",
+   "slogan": "Sinut löydetään, nähdään ja kuullaan.",
+   "telephone": "+358401561190",
+   "email": "joonas@naykuulu.fi",
+   "founder": {
+    "@type": "Person",
+    "name": "Joonas Mähönen"
+   },
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Jyväskylä",
+    "addressRegion": "Keski-Suomi",
+    "addressCountry": "FI"
+   },
+   "areaServed": [
+    {
+     "@type": "City",
+     "name": "Jyväskylä"
+    },
+    {
+     "@type": "AdministrativeArea",
+     "name": "Keski-Suomi"
+    },
+    {
+     "@type": "Country",
+     "name": "Suomi"
+    }
+   ],
+   "knowsLanguage": "fi",
+   "knowsAbout": [
+    "hakukoneoptimointi",
+    "SEO",
+    "GEO",
+    "näkyvyys tekoälyhauissa",
+    "Google-yritysprofiili",
+    "paikallinen näkyvyys",
+    "sosiaalinen media",
+    "Google-mainonta"
+   ]
+  },
+  {
+   "@type": "Service",
+   "@id": "https://naykuulu.fi/palvelut/tunnu/#palvelu",
+   "name": "Tunnu: nettisivut ja ilme",
+   "serviceType": "nettisivut ja ilme",
+   "description": "Verkkosivun korjaus tai uusi kattava sivusto, joka toimii puhelimella: palvelusivut, hakukuvaukset, soittolinkki, yritystiedot ja nopeus kuntoon.",
+   "provider": {
+    "@id": "https://naykuulu.fi/#yritys"
+   },
+   "areaServed": [
+    {
+     "@type": "City",
+     "name": "Jyväskylä"
+    },
+    {
+     "@type": "AdministrativeArea",
+     "name": "Keski-Suomi"
+    },
+    {
+     "@type": "Country",
+     "name": "Suomi"
+    }
+   ],
+   "offers": [
+    {
+     "@type": "Offer",
+     "name": "Sivujen korjaus",
+     "description": "nykyiset sivut kuntoon",
+     "priceCurrency": "EUR",
+     "price": "390"
+    },
+    {
+     "@type": "Offer",
+     "name": "Uudet sivut",
+     "description": "etusivu, palvelusivut, yhteystiedot ja lomake, tietosuojaseloste ja kävijäseuranta",
+     "priceCurrency": "EUR",
+     "price": "1490"
+    },
+    {
+     "@type": "Offer",
+     "name": "Ylläpito",
+     "description": "päivitykset ja tarkistukset",
+     "priceCurrency": "EUR",
+     "price": "69"
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Etusivu",
+     "item": "https://naykuulu.fi/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Palvelut",
+     "item": "https://naykuulu.fi/palvelut/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Sivut, jotka tuntuvat sinulta ja toimivat puhelimella",
+     "item": "https://naykuulu.fi/palvelut/tunnu/"
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="muste"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="3.2"/></filter></svg>
+<header class="yla2" style="--tausta:#2F5D50;--teksti:#F7F7F2;--viiva:#E0A43A"><div class="sis">
+<nav aria-label="Päävalikko"><a class="logo" href="/"><img src="/logo_vaaka_vaalea.png" alt="Näy &amp; Kuulu, etusivulle" width="206" height="34"></a><span class="linkit"><a href="/palvelut/" aria-current="page">Palvelut</a><a href="/mittaus/">Ilmainen mittaus</a><a href="/blogi/">Blogi</a><a href="tel:+358401561190">040 156 1190</a><a class="ilmo" href="/mittaus/">Pyydä mittaus</a></span></nav>
+<div class="gr"><div><div class="polku"><a href="/">Etusivu</a> / <a href="/palvelut/">Palvelut</a></div><h1>Sivut, jotka tuntuvat sinulta ja toimivat puhelimella</h1><p class="ingressi">Suurin osa hakee puhelimella. Jos sivu aukeaa hitaasti tai numeroa ei voi painaa, asiakas palaa hakuun ja soittaa muualle.</p></div><svg class="piirros kuvaa" viewBox="0 0 240 240" aria-hidden="true" focusable="false"><g filter="url(#muste)"><path d="M120 36c-44 0-74 32-74 76"/><path d="M194 112c0-44-30-76-74-76"/><path d="M68 150c-4-12-6-24-6-38 0-34 26-58 58-58s58 24 58 58c0 20-4 38-10 52"/>
+<path d="M90 186c-8-22-12-46-12-74 0-24 18-42 42-42s42 18 42 42c0 28-4 54-14 76"/><path d="M120 92c-12 0-20 8-20 20 0 34 6 64 18 90"/><path d="M140 112c0 34-4 62-12 86"/></g></svg></div>
+</div><svg class="kaari" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46V30C200 4 420 0 600 14s400 24 600-6v38z" fill="currentColor"/></svg></header>
+<main>
+<section><div class="sis"><div class="ongelma"><div class="teksti"><h2>Mikä tässä on ongelma?</h2><p>Sama asia toistuu mittauksissa: sivut ovat olemassa, mutta puhelimella niitä on vaikea käyttää. Numeroa ei voi painaa, kaupunki ei näy, tai sivu aukeaa yli neljä sekuntia. Moni ei jaksa odottaa niin kauan. Joskus firma näyttää netissä ja somessa eri firmalta, koska logo ja värit vaihtelevat.</p></div><div class="ruudukko graafi" role="img" aria-label="Sivun avautuminen puhelimella: mitattu remonttifirma 7,7 sekuntia. Googlen mukaan hyvä on alle 2,5 sekuntia ja heikko yli 4 sekuntia.">
+<span class="pieni">Kuinka kauan sivu aukeaa puhelimella</span><b>7,7 s</b><span class="pieni">mitattu jyväskyläläinen firma</span>
+<div class="palkit"><div class="akseli"><i class="raja" style="left:31.2%" title="Hyvä: alle 2,5 s"></i><i class="raja" style="left:50.0%" title="Heikko: yli 4 s"></i>
+<div class="palkki" style="width:96.2%" title="Mitattu firma: 7,7 s"></div><div class="palkki hyva" style="width:31.2%" title="Hyvä raja: 2,5 s"></div></div>
+<div class="asteikko"><em style="left:31.2%">2,5 s</em><em style="left:50.0%">4 s</em><em style="left:100%">8 s</em></div><div class="selite"><span><i class="m"></i>mitattu firma</span><span><i class="h"></i>Googlen hyvä raja</span></div></div>
+<span class="kasi">moni lähtee jo ennen kuin sivu aukeaa</span><span class="pieni">Mittaus 25.10.2026. Rajat ovat Googlen omat: alle 2,5 s on hyvä, yli 4 s heikko.</span></div></div></div></section>
+<section class="vali" style="--vari:#2F5D50"><div class="sis"><h2>Mitä teen</h2><ul class="tehdaan"><li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 17c3 2 6 5 8 9 4-9 9-16 15-21"/></svg>Nykyisten sivujen korjaus: numero, jota voi painaa, kaupunki näkyviin, Googlelle oikeat tiedot ja sivu nopeaksi.</li><li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 17c3 2 6 5 8 9 4-9 9-16 15-21"/></svg>Tai kokonaan uudet sivut: etusivu, oma sivu jokaiselle palvelulle, yhteystiedot ja tietosuojaseloste, ja kaikki toimii ensin puhelimella.</li><li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 17c3 2 6 5 8 9 4-9 9-16 15-21"/></svg>Sama logo, samat värit ja sama viesti sivuilla ja somessa.</li><li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 17c3 2 6 5 8 9 4-9 9-16 15-21"/></svg>Ylläpito, jotta tiedot pysyvät ajan tasalla.</li></ul></div></section>
+<section class="vali" style="--vari:#2F5D50;--vaalea:#F2F7F3"><div class="sis"><div class="tulos"><div style="width:110px;color:#2F5D50"><svg class="piirros" viewBox="0 0 240 240" aria-hidden="true" focusable="false"><g filter="url(#muste)"><path d="M120 36c-44 0-74 32-74 76"/><path d="M194 112c0-44-30-76-74-76"/><path d="M68 150c-4-12-6-24-6-38 0-34 26-58 58-58s58 24 58 58c0 20-4 38-10 52"/>
+<path d="M90 186c-8-22-12-46-12-74 0-24 18-42 42-42s42 18 42 42c0 28-4 54-14 76"/><path d="M120 92c-12 0-20 8-20 20 0 34 6 64 18 90"/><path d="M140 112c0 34-4 62-12 86"/></g></svg></div><div><h3>Miten tulos näkyy</h3><p>Kuinka nopeasti sivu aukeaa puhelimella, ja onko yhteydenotto helppoa. Lähtötilanne mitataan ennen työtä, joten näet itse, mitä muuttui.</p></div></div></div></section>
+<section class="vali" style="--vari:#2F5D50"><div class="sis"><h2>Hinta</h2><div class="laput"><div class="lappu"><b>Sivujen korjaus</b><span class="h">390&nbsp;€</span><span>nykyiset sivut kuntoon</span></div><div class="lappu"><b>Uudet sivut</b><span class="h">1&nbsp;490&nbsp;€</span><span>etusivu, palvelusivut, yhteystiedot ja lomake, tietosuojaseloste ja kävijäseuranta</span></div><div class="lappu"><b>Ylläpito</b><span class="h">69&nbsp;€/kk</span><span>päivitykset ja tarkistukset</span></div></div><p class="pieni kapea">Hinnat alv 0 %. Mittaus kertoo, mitä juuri sun firmassa kannattaa korjata, joten et maksa siitä, mikä on jo kunnossa. Tilit ja profiilit ovat aina sun nimissä.</p></div></section>
+
+<section class="vali"><div class="sis"><h3>Muut palvelut</h3><div class="aistit"><a href="/palvelut/loydy/" style="--av:#1F3A5F;--ai:#F7F7F2"><svg class="piirros" viewBox="0 0 240 240" aria-hidden="true" focusable="false"><g filter="url(#muste)"><path class="aalto" d="M38 196c22-14 50-20 82-20s60 6 82 20"/><path class="aalto" d="M62 214c16-8 36-12 58-12s42 4 58 12"/>
+<path d="M120 172c-30-38-48-64-48-90a48 48 0 0 1 96 0c0 26-18 52-48 90z"/><circle cx="120" cy="82" r="18"/></g></svg>Löydy</a><a href="/palvelut/nay/" style="--av:#E0A43A;--ai:#142740"><svg class="piirros" viewBox="0 0 240 240" aria-hidden="true" focusable="false"><g filter="url(#muste)"><path d="M24 120c26-38 58-58 96-58s70 20 96 58c-26 38-58 58-96 58s-70-20-96-58z"/><circle cx="120" cy="120" r="30"/><circle cx="120" cy="120" r="10" class="taysi"/>
+<path class="aalto" d="M120 18v20M58 34l12 16M182 34l-12 16M120 222v-20M58 206l12-16M182 206l-12-16"/></g></svg>Näy</a><a href="/palvelut/kuulu/" style="--av:#B23A48;--ai:#FFF6F2"><svg class="piirros" viewBox="0 0 240 240" aria-hidden="true" focusable="false"><g filter="url(#muste)"><path d="M96 46c38-10 74 14 74 54 0 30-22 40-26 62-4 20-14 34-34 34-16 0-26-10-28-22"/><path d="M110 92c4-14 26-14 30 2 3 12-8 18-14 24"/>
+<path class="aalto" d="M188 84c10 12 10 34 0 46"/><path class="aalto" d="M204 66c20 24 20 58 0 82"/><path class="aalto" d="M220 50c28 34 28 80 0 114"/></g></svg>Kuulu</a><a href="/palvelut/maistu/" style="--av:#6E2238;--ai:#FBEFF2"><svg class="piirros" viewBox="0 0 240 240" aria-hidden="true" focusable="false"><g filter="url(#muste)"><path d="M120 30c4 30-4 54-24 74"/><path d="M120 30c22 20 34 44 30 72"/><path d="M120 30c-30 0-52 14-64 36 26 6 48 0 64-36z"/><path d="M122 30c26-10 52-6 70 12-22 14-46 10-70-12z"/>
+<circle cx="86" cy="140" r="30"/><circle cx="152" cy="136" r="32"/><circle cx="118" cy="190" r="28"/><path class="aalto" d="M78 128c4-6 10-8 16-8M144 122c4-6 10-8 16-8M110 180c4-6 10-8 16-8"/></g></svg>Maistu</a></div></div></section>
+<section><div class="sis"><div class="cta2"><div><h2>Katsotaan ensin, miten sut löydetään nyt</h2><p>Kerro firman nimi ja paikkakunta. Mittaan maksutta, löytyykö yrityksesi Googlesta, kartalta ja tekoälyhauista, ja kerron yhden konkreettisen havainnon. Se ei sido mihinkään.</p><a class="nappi" href="https://docs.google.com/forms/d/e/1FAIpQLSdQ899hPGrsLPNvacFHOvFxhM9YdgB2-9FwwTz6n1oB_IQjag/viewform" target="_blank" rel="noopener">Pyydä ilmainen mittaus</a></div><svg class="piirros kuvaa" viewBox="0 0 240 240" aria-hidden="true" focusable="false"><g filter="url(#muste)"><circle cx="104" cy="104" r="56"/><path d="M146 146l56 56"/><path class="aalto" d="M76 110l18 18 38-46"/></g></svg></div></div></section>
+</main>
+<footer class="ala2"><div class="sis">
+<img src="/logo_vaaka_vaalea.png" alt="Näy &amp; Kuulu" width="182" height="30">
+<nav aria-label="Alavalikko"><a href="/">Etusivu</a><a href="/palvelut/">Palvelut</a><a href="/mittaus/">Ilmainen mittaus</a><a href="/blogi/">Blogi</a><button class="evalinkki" id="eva_auki">Evästeasetukset</button></nav>
+<address>Näy &amp; Kuulu, Jyväskylä<br><a href="mailto:joonas@naykuulu.fi">joonas@naykuulu.fi</a><br><a href="tel:+358401561190">040 156 1190</a></address>
+</div></footer>
+<div class="eva" id="eva" role="dialog" aria-label="Evästeet">
+  <b>Evästeet</b>
+  Sivu käyttää välttämättömien lisäksi analytiikkaevästeitä (Google Analytics ja Microsoft Clarity), joilla näen, montako kävijää sivulla käy, mistä he tulevat ja miten sivua käytetään. Analytiikka käynnistyy vain, jos hyväksyt sen. Voit muuttaa valintaa milloin vain sivun alalaidasta.
+  <div class="napit"><button class="hy" id="eva_hy">Hyväksy analytiikka</button><button class="ei" id="eva_ei">Vain välttämättömät</button></div>
+</div>
+<script>
+(function(){var ID='G-E0XFE2C05K',CL='z3s92cz19c',K='nk_suostumus';
+function lue(){try{return localStorage.getItem(K)}catch(e){return null}}
+function tallenna(v){try{localStorage.setItem(K,v)}catch(e){}}
+var ladattu=false;
+function lataa(){if(ladattu)return;ladattu=true;window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});
+gtag('js',new Date());gtag('config',ID);var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+ID;document.head.appendChild(s);
+(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,'clarity','script',CL);window.clarity('consent')}
+var eva=document.getElementById('eva');
+function nayta(){eva.style.display='block'}
+document.getElementById('eva_hy').onclick=function(){tallenna('kylla');eva.style.display='none';lataa()};
+document.getElementById('eva_ei').onclick=function(){tallenna('ei');eva.style.display='none';if(ladattu)location.reload()};
+document.getElementById('eva_auki').onclick=nayta;
+var v=lue();if(v==='kylla')lataa();else if(v!=='ei')nayta();
+document.querySelectorAll('a[href*="docs.google.com/forms"]').forEach(function(a){a.addEventListener('click',function(){if(window.gtag)gtag('event','generate_lead',{lomake:'pilotti'})})});
+})();
+</script>
+</body>
+</html>
