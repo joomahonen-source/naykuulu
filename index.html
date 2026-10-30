@@ -13,13 +13,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap">
-<!--
-  LASKEUTUMISSIVU, LUONNOS 1 (22.10.2026). Yleinen versio.
-  Rakenne (myyntikaava): 1 tunnistettava ongelma -> 2 mitattu todiste -> 3 mita nakymattomyys maksaa
-  -> 4 ratkaisu -> 5 riskin poisto (arvot ja sitoumukset) -> 6 hinta -> 7 yksi toimintakehotus.
-  TOIMIALAVERSIOT: vaihda kohdat, joissa on kommentti TOIMIALA (esimerkkihaku, mittauksen ala, referenssi).
-  TEKSTI viimeistellaan brandiaanen (paketiston vaihe 3) jalkeen.
--->
 <style>
 :root{--sini:#1F3A5F;--syva:#142740;--lumi:#F7F7F2;--koivu:#D9D6CC;--puolukka:#B23A48;--pv:#D9606E;--himmea:#56677F;--valk:#FFFFFF}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -151,14 +144,80 @@ footer .sis{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .eva .hy{background:var(--puolukka);color:var(--valk)}
 .eva .ei{background:transparent;color:var(--puolukka)}
 footer button.evalinkki{background:none;border:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer;padding:0}
+.yla nav a.nk-lisa{color:var(--koivu);font-weight:600}@media(max-width:600px){.yla nav a.nk-lisa{display:none}}
 </style>
+<link rel="canonical" href="https://naykuulu.fi/">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://naykuulu.fi/#yritys",
+   "name": "Näy & Kuulu",
+   "url": "https://naykuulu.fi/",
+   "logo": "https://naykuulu.fi/merkki_sini.png",
+   "image": "https://naykuulu.fi/jako.png",
+   "description": "Näy & Kuulu laittaa yrityksen näkyvyyden kuntoon Googlessa, kartalla ja tekoälyhauissa ja näyttää tuloksen luvuin. Lähtötilanne mitataan maksutta ennen työtä.",
+   "slogan": "Sinut löydetään, nähdään ja kuullaan.",
+   "telephone": "+358401561190",
+   "email": "joonas@naykuulu.fi",
+   "founder": {
+    "@type": "Person",
+    "name": "Joonas Mähönen"
+   },
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Jyväskylä",
+    "addressRegion": "Keski-Suomi",
+    "addressCountry": "FI"
+   },
+   "areaServed": [
+    {
+     "@type": "City",
+     "name": "Jyväskylä"
+    },
+    {
+     "@type": "AdministrativeArea",
+     "name": "Keski-Suomi"
+    },
+    {
+     "@type": "Country",
+     "name": "Suomi"
+    }
+   ],
+   "knowsLanguage": "fi",
+   "knowsAbout": [
+    "hakukoneoptimointi",
+    "SEO",
+    "GEO",
+    "näkyvyys tekoälyhauissa",
+    "Google-yritysprofiili",
+    "paikallinen näkyvyys",
+    "sosiaalinen media",
+    "Google-mainonta"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://naykuulu.fi/#sivusto",
+   "url": "https://naykuulu.fi/",
+   "name": "Näy & Kuulu",
+   "inLanguage": "fi",
+   "publisher": {
+    "@id": "https://naykuulu.fi/#yritys"
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
 <!-- 1. ONGELMA, JONKA LUKIJA TUNNISTAA -->
 <header class="yla">
   <div class="sis">
-    <nav><img src="merkki_lumi.png" alt="Näy &amp; Kuulu"><span class="navoik"><a class="puh" href="tel:+358401561190">040 156 1190</a><a class="ilmo" href="#mittaus">Ilmoittaudu</a></span></nav>
+    <nav><img src="merkki_lumi.png" alt="Näy &amp; Kuulu"><span class="navoik"><a class="puh nk-lisa" href="/palvelut/">Palvelut</a><a class="puh nk-lisa" href="/blogi/">Blogi</a><a class="puh" href="tel:+358401561190">040 156 1190</a><a class="ilmo" href="#mittaus">Ilmoittaudu</a></span></nav>
     <div class="gr">
       <div>
         <p class="kasi">Näy &amp; Kuulu etsii</p>
@@ -278,7 +337,7 @@ document.getElementById('l_menetys').textContent=f(k*m*12);document.getElementBy
     <p class="yht">joonas@naykuulu.fi · <a href="tel:+358401561190" style="color:inherit">040 156 1190</a></p>
   </div>
 </section>
-<footer><div class="sis"><div>Näy &amp; Kuulu · Jyväskylä</div><div>Sinut löydetään, nähdään ja kuullaan.</div><div><button class="evalinkki" id="eva_auki">Evästeasetukset</button></div></div></footer>
+<footer><div class="sis"><div>Näy &amp; Kuulu · Jyväskylä · <a href="/palvelut/">Palvelut</a> · <a href="/mittaus/">Ilmainen mittaus</a> · <a href="/blogi/">Blogi</a></div><div>Sinut löydetään, nähdään ja kuullaan.</div><div><button class="evalinkki" id="eva_auki">Evästeasetukset</button></div></div></footer>
 <div class="eva" id="eva" role="dialog" aria-label="Evästeet">
   <b>Evästeet</b>
   Sivu käyttää välttämättömien lisäksi analytiikkaevästeitä (Google Analytics ja Microsoft Clarity), joilla näen, montako kävijää sivulla käy, mistä he tulevat ja miten sivua käytetään. Analytiikka käynnistyy vain, jos hyväksyt sen. Voit muuttaa valintaa milloin vain sivun alalaidasta.
