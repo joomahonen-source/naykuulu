@@ -314,6 +314,70 @@ document.getElementById('l_menetys').textContent=f(k*m*12);document.getElementBy
   </div>
 </section>
 
+<!-- KASVUVIVUT: sijoitus index.html:ssä heti osion <section class="ratkaisu" id="miten"> jälkeen ja ennen osiota <section class="turva">. Tyylit ovat tässä tiedostossa ja käyttävät sivun omia muuttujia (--sini, --syva, --lumi jne.). -->
+<style>
+.vivut{background:var(--sini);color:var(--lumi)}
+.vivut .johdanto{max-width:720px;color:var(--koivu);font-size:19px}
+.vivut .rivit{margin-top:36px;display:grid;gap:22px}
+.vivut .aisti{display:grid;grid-template-columns:200px 1fr;gap:22px;align-items:stretch}
+.vivut .aisti>h3{font-size:clamp(30px,4vw,40px);color:var(--pv);align-self:center;letter-spacing:-.02em}
+.vivut .vivut-kortit{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.vivut .vipu{background:var(--lumi);color:var(--syva);border-radius:18px;padding:24px;border-left:6px solid var(--puolukka);min-width:0}
+.vivut .vipu h4{font-size:21px;line-height:1.2;margin:0 0 8px;letter-spacing:-.01em}
+.vivut .vipu p{font-size:16px;line-height:1.55}
+.vivut .vipu .rajaus{margin-top:10px;font-weight:700;color:var(--puolukka)}
+.vivut .tila{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#fff;border-radius:999px;padding:3px 12px;margin-bottom:10px;background:#3E8E63}
+.vivut .tila.osittain{background:#B07A1F}
+@media(max-width:820px){
+  .vivut .aisti{grid-template-columns:1fr;gap:10px}
+  .vivut .vivut-kortit{grid-template-columns:1fr}
+  .vivut .aisti>h3{align-self:start}
+}
+</style>
+<section class="vivut" id="kasvuvivut">
+  <div class="sis">
+    <p class="kasi">Kasvuvivut</p>
+    <h2>Neljä aistia. Kahdeksan tapaa kasvaa.</h2>
+    <p class="johdanto">Näy &amp; Kuulu rakentuu neljästä aistista. Jokaisen alla on kaksi kasvuvipua. Kerromme rehellisesti, mikä on jo valmista ja mikä vasta osittain.</p>
+    <div class="rivit">
+
+      <div class="aisti">
+        <h3>Löydy</h3>
+        <div class="vivut-kortit">
+          <div class="vipu"><span class="tila osittain">Osittain</span><h4>Uudet markkinat</h4><p>Markkinatutkimus: markkinan koko ja kilpailijat. Lisäksi kohderyhmät ja Löydy uusille alueille.</p><p class="rajaus">Ei vientiä eikä kansainvälistä verkostoa.</p></div>
+          <div class="vipu"><span class="tila">Valmis</span><h4>Markkinatutkimus</h4><p>Markkinatutkimus- ja asiakasymmärrysosat, hintatutkimus ja kilpailija-analyysit.</p></div>
+        </div>
+      </div>
+
+      <div class="aisti">
+        <h3>Näy</h3>
+        <div class="vivut-kortit">
+          <div class="vipu"><span class="tila">Valmis</span><h4>Uudet liidit</h4><p>Myyntipaketti: liidit, kohderyhmät, soittolistat, tarjoukset ja kampanjat. Löydy ja Näy tuovat yhteydenotot. Mittaamme 16 hakua ennen ja jälkeen.</p></div>
+          <div class="vipu"><span class="tila">Valmis</span><h4>Kasvuvauhti ja kilpailukyky</h4><p>Kilpailijaseuranta, mainosten arviokerros, viikkoraportit ja SEO- ja GEO-työ. Jokainen työ mitataan ennen ja jälkeen.</p></div>
+        </div>
+      </div>
+
+      <div class="aisti">
+        <h3>Kuulu</h3>
+        <div class="vivut-kortit">
+          <div class="vipu"><span class="tila">Valmis</span><h4>Nykyisten asiakkaiden hoito</h4><p>Hoitopaketti, 7 osaa: asiakkuus, uusinta, muistaminen, tyytyväisyys (NPS), yhteydenpidon rytmi, asiakasterveys ja analytiikka.</p></div>
+          <div class="vipu"><span class="tila osittain">Osittain</span><h4>Myyntiresurssin puute</h4><p>Soittolistat, myyntispiikit ja lisämyynti. Avustaja valmistelee jokaisen kontaktin.</p><p class="rajaus">Myyjiä emme tarjoa.</p></div>
+        </div>
+      </div>
+
+      <div class="aisti">
+        <h3>Tunnu</h3>
+        <div class="vivut-kortit">
+          <div class="vipu"><span class="tila">Valmis</span><h4>Brändi ja asemointi</h4><p>Perusta, lupaus, ääni, ilme ja verkkosivu. Brändipiste ja asiakaskohtaiset brändisäännöt.</p></div>
+          <div class="vipu"><span class="tila">Valmis</span><h4>Tuotteen tai palvelun lanseeraus</h4><p>Tuotekehityspaketti, 14 osaa: ideat, kokeilut, porttipäätökset, koemarkkinointi, laskelmat, riskit, lanseeraus ja jälkiarvio.</p></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 <!-- 5. RISKIN POISTO: ARVOT JA SITOUMUKSET -->
 <section class="turva">
   <div class="sis">
