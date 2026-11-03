@@ -122,6 +122,12 @@ section{padding:64px 0}
 .polku2 li:first-child:before{border-color:var(--koivu)}
 .polku2 li:last-child{border-left-color:transparent}
 .graafi .polku2 b{display:block;font-family:Inter,sans-serif;font-size:16px;font-weight:700;margin:0;line-height:1.3}.polku2 span{font-size:13.5px;color:var(--himmea)}
+.hakukentta{display:flex;align-items:center;gap:8px;border:2px solid var(--koivu);border-radius:999px;padding:8px 14px;margin:6px 0 10px;font-size:15px;background:#fff;min-height:42px}
+.hakukentta svg{width:18px;height:18px;fill:none;stroke:var(--himmea);stroke-width:2.5;stroke-linecap:round;flex:none}
+.js-vieri .vieri [data-k]{opacity:0;transform:translateY(6px);transition:opacity .25s,transform .25s}
+.js-vieri .vieri [data-k].nak{opacity:1;transform:none}
+.js-vieri .vieri .kirjoittaa:after{content:"";display:inline-block;width:2px;height:1.1em;margin-left:2px;vertical-align:-2px;background:var(--puolukka);animation:vilkku 1s steps(1) infinite}
+@keyframes vilkku{50%{opacity:0}}
 /* tulos */
 .tulos{background:var(--vaalea);border-radius:28px;padding:36px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
 .tulos .ee{display:flex;align-items:center;gap:14px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:40px;line-height:1}
@@ -351,12 +357,12 @@ footer button.evalinkki{background:none;border:0;color:inherit;font:inherit;text
 <path d="M90 186c-8-22-12-46-12-74 0-24 18-42 42-42s42 18 42 42c0 28-4 54-14 76"/><path d="M120 92c-12 0-20 8-20 20 0 34 6 64 18 90"/><path d="M140 112c0 34-4 62-12 86"/></g></svg></div>
 </div><svg class="kaari" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46V30C200 4 420 0 600 14s400 24 600-6v38z" fill="currentColor"/></svg></header>
 <main>
-<section><div class="sis"><div class="ongelma"><div class="teksti"><h2>Mikä tässä on ongelma?</h2><p>Sama asia toistuu mittauksissa: sivut ovat olemassa, mutta puhelimella niitä on vaikea käyttää. Numeroa ei voi painaa, kaupunki ei näy, tai sivu aukeaa yli neljä sekuntia. Moni ei jaksa odottaa niin kauan. Joskus firma näyttää netissä ja somessa eri firmalta, koska logo ja värit vaihtelevat.</p></div><div class="ruudukko graafi" role="img" aria-label="Sivun avautuminen puhelimella: mitattu remonttifirma 7,7 sekuntia. Googlen mukaan hyvä on alle 2,5 sekuntia ja heikko yli 4 sekuntia.">
-<span class="pieni">Kuinka kauan sivu aukeaa puhelimella</span><b>7,7 s</b><span class="pieni">mitattu jyväskyläläinen firma</span>
+<section><div class="sis"><div class="ongelma"><div class="teksti"><h2>Mikä tässä on ongelma?</h2><p>Sama asia toistuu mittauksissa: sivut ovat olemassa, mutta puhelimella niitä on vaikea käyttää. Numeroa ei voi painaa, kaupunki ei näy, tai sivu aukeaa yli neljä sekuntia. Moni ei jaksa odottaa niin kauan. Joskus firma näyttää netissä ja somessa eri firmalta, koska logo ja värit vaihtelevat.</p></div><div class="ruudukko graafi vieri" role="img" aria-label="Sivun avautuminen puhelimella: mitattu remonttifirma 7,7 sekuntia. Googlen mukaan hyvä on alle 2,5 sekuntia ja heikko yli 4 sekuntia.">
+<span class="pieni">Kuinka kauan sivu aukeaa puhelimella</span><b data-luku="7,7" data-k0="0.1" data-k1="0.6" data-jalki=" s">7,7 s</b><span class="pieni">mitattu jyväskyläläinen firma</span>
 <div class="palkit"><div class="akseli"><i class="raja" style="left:31.2%" title="Hyvä: alle 2,5 s"></i><i class="raja" style="left:50.0%" title="Heikko: yli 4 s"></i>
-<div class="palkki" style="width:96.2%" title="Mitattu firma: 7,7 s"></div><div class="palkki hyva" style="width:31.2%" title="Hyvä raja: 2,5 s"></div></div>
+<div class="palkki" style="width:96.2%" data-leveys="96.2%" data-k0="0.1" data-k1="0.6" title="Mitattu firma: 7,7 s"></div><div class="palkki hyva" style="width:31.2%" data-leveys="31.2%" data-k0="0.1" data-k1="0.3" title="Hyvä raja: 2,5 s"></div></div>
 <div class="asteikko"><em style="left:31.2%">2,5 s</em><em style="left:50.0%">4 s</em><em style="left:100%">8 s</em></div><div class="selite"><span><i class="m"></i>mitattu firma</span><span><i class="h"></i>Googlen hyvä raja</span></div></div>
-<span class="kasi">moni lähtee jo ennen kuin sivu aukeaa</span><span class="pieni">Mittaus 25.10.2026. Rajat ovat Googlen omat: alle 2,5 s on hyvä, yli 4 s heikko.</span></div></div></div></section>
+<span class="kasi" data-k="0.7">moni lähtee jo ennen kuin sivu aukeaa</span><span class="pieni">Mittaus 25.10.2026. Rajat ovat Googlen omat: alle 2,5 s on hyvä, yli 4 s heikko.</span></div></div></div></section>
 <section class="vali" style="--vari:#2F5D50"><div class="sis"><h2>Mitä teen</h2><ul class="tehdaan"><li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 17c3 2 6 5 8 9 4-9 9-16 15-21"/></svg>Nykyisten sivujen korjaus: numero, jota voi painaa, kaupunki näkyviin, Googlelle oikeat tiedot ja sivu nopeaksi.</li><li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 17c3 2 6 5 8 9 4-9 9-16 15-21"/></svg>Tai kokonaan uudet sivut: etusivu, oma sivu jokaiselle palvelulle, yhteystiedot ja tietosuojaseloste, ja kaikki toimii ensin puhelimella.</li><li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 17c3 2 6 5 8 9 4-9 9-16 15-21"/></svg>Sama logo, samat värit ja sama viesti sivuilla ja somessa.</li><li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 17c3 2 6 5 8 9 4-9 9-16 15-21"/></svg>Ylläpito, jotta tiedot pysyvät ajan tasalla.</li></ul></div></section>
 <section class="vali" style="--vari:#2F5D50;--vaalea:#EAF3EE"><div class="sis"><div class="tulos"><div style="width:110px;color:#2F5D50"><svg class="piirros" viewBox="0 0 240 240" aria-hidden="true" focusable="false"><g filter="url(#muste)"><path d="M120 36c-44 0-74 32-74 76"/><path d="M194 112c0-44-30-76-74-76"/><path d="M68 150c-4-12-6-24-6-38 0-34 26-58 58-58s58 24 58 58c0 20-4 38-10 52"/>
 <path d="M90 186c-8-22-12-46-12-74 0-24 18-42 42-42s42 18 42 42c0 28-4 54-14 76"/><path d="M120 92c-12 0-20 8-20 20 0 34 6 64 18 90"/><path d="M140 112c0 34-4 62-12 86"/></g></svg></div><div><h3>Miten tulos näkyy</h3><p>Kuinka nopeasti sivu aukeaa puhelimella, ja onko yhteydenotto helppoa. Lähtötilanne mitataan ennen työtä, joten näet itse, mitä muuttui.</p></div></div></div></section>
@@ -380,6 +386,18 @@ footer button.evalinkki{background:none;border:0;color:inherit;font:inherit;text
   <div class="napit"><button class="hy" id="eva_hy">Hyväksy analytiikka</button><button class="ei" id="eva_ei">Vain välttämättömät</button></div>
 </div>
 <script>
+(function(){if(!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var el=[].slice.call(document.querySelectorAll('.vieri'));if(!el.length)return;document.documentElement.classList.add('js-vieri');
+function luku(s){return parseFloat(String(s).replace(',','.'))}
+function piirra(){var vh=innerHeight;el.forEach(function(e){var r=e.getBoundingClientRect();var p=(vh-r.top)/(vh*0.55+r.height*0.45);p=Math.max(0,Math.min(1,p));
+e.querySelectorAll('[data-k]').forEach(function(x){x.classList.toggle('nak',p>=parseFloat(x.dataset.k))});
+e.querySelectorAll('[data-k0]').forEach(function(x){var a=parseFloat(x.dataset.k0),b=parseFloat(x.dataset.k1),q=Math.max(0,Math.min(1,(p-a)/(b-a)));
+if(x.dataset.kirjoita!==undefined){var t=x.dataset.kirjoita,n=Math.round(q*t.length);x.textContent=t.slice(0,n);x.classList.toggle('kirjoittaa',q>0&&q<1)}
+else if(x.dataset.leveys!==undefined){x.style.width=(luku(x.dataset.leveys)*q).toFixed(1)+'%'}
+else if(x.dataset.luku!==undefined){var v=luku(x.dataset.luku)*q,d=String(x.dataset.luku).indexOf(',')>=0?1:0;x.textContent=v.toFixed(d).replace('.',',')+(x.dataset.jalki||'')}})})}
+var odota=false;function kuuntele(){if(!odota){odota=true;requestAnimationFrame(function(){odota=false;piirra()})}}
+addEventListener('scroll',kuuntele,{passive:true});addEventListener('resize',kuuntele);piirra()})();
+</script><script>
 (function(){var ID='G-E0XFE2C05K',CL='z3s92cz19c',K='nk_suostumus';
 function lue(){try{return localStorage.getItem(K)}catch(e){return null}}
 function tallenna(v){try{localStorage.setItem(K,v)}catch(e){}}
